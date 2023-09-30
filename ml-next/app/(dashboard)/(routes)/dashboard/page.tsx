@@ -22,10 +22,10 @@ const DashboardPage = () => {
     <div>
       <div className="mb-8 space-y-4">
         <h2 className="text-2xl md:text-4xl font-bold text-center">
-          ML Generation
+          ML Models
         </h2>
         <p className="text-muted-foreground font-light text-sm md:text-lg text-center">
-          ML Generation
+          ML Models
         </p>
       </div>
       <div className="px-4 md:px-20 lg:px-32 space-y-4">
