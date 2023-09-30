@@ -3,10 +3,7 @@
 import { Montserrat } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-
 import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
-
 const font = Montserrat({
   weight: "600",
   subsets: ["latin"],
@@ -22,7 +19,7 @@ export const LandingNavbar = () => {
           <Image fill alt="Logo" src="/logo.png" />
         </div>
         <h1 className={cn("text-2xl font-bold text-white", font.className)}>
-          ML Model
+          ML Models
         </h1>
       </Link>
     </nav>

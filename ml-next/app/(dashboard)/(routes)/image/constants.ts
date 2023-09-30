@@ -5,7 +5,8 @@ export const formSchema = z.object({
 });
 
 export const graphTypes = [
-  { label: "compute_roc", value: "compute_roc" },
-  { label: "accu_comp_graph", value: "accu_comp_graph" },
   { label: "SVM", value: "SVM" },
+  { label: "Logistic Regression", value: "logistic_roc_curve" },
+  { label: "KNN", value: "knn_matrix_roc" },
+  { label: "Comparison Graph", value: "accu_comp_graph" },
 ];

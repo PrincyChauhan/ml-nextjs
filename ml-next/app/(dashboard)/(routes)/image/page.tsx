@@ -66,8 +66,8 @@ const ImagePage = () => {
   return (
     <div>
       <Heading
-        title="ML Generation"
-        description="ML Generation"
+        title="ML Models"
+        description="ML Models"
         icon={ImageIcon}
         iconColor="text-pink-700"
         bgColor="bg-pink-700/10"
