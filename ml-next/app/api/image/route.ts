@@ -12,6 +12,7 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         image_url: res.data.image_url,
+        
       },
       {
         headers: {
