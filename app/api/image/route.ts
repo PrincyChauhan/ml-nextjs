@@ -12,7 +12,9 @@ export async function POST(req: Request) {
     return NextResponse.json(
       {
         image_url: res.data.image_url,
-        
+        accuracy: res.data.accuracy
+          ? parseFloat(res.data.accuracy).toFixed(2)
+          : 0,
       },
       {
         headers: {

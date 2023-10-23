@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from "react";
@@ -31,6 +32,7 @@ import { toast } from "react-hot-toast";
 const ImagePage = () => {
   const router = useRouter();
   const [images, setImages] = useState<string>("");
+  const [accuracy, setAccuracy] = useState<string>("");
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -44,10 +46,12 @@ const ImagePage = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
       setImages("");
+      setAccuracy("");
 
       const response = await axios.post("/api/image", values);
 
       setImages(response.data.image_url);
+      setAccuracy(response.data.accuracy);
 
       form.reset();
     } catch (error: any) {
@@ -148,6 +152,11 @@ const ImagePage = () => {
                   />
                 </div>
               </Card>
+            </div>
+          )}
+          {accuracy && (
+            <div className="flex justify-center">
+              <h1>{accuracy}</h1>
             </div>
           )}
         </div>
