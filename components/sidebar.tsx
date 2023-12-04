@@ -6,7 +6,7 @@ import { Montserrat } from "next/font/google";
 import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
-import { ImageIcon } from "lucide-react";
+import { HistoryIcon, ImageIcon } from "lucide-react";
 
 const montserrat = Montserrat({
   weight: "600",
@@ -19,6 +19,12 @@ const routes = [
     href: "/image",
     icon: ImageIcon,
     color: "text-pink-700",
+  },
+  {
+    label: "History",
+    href: "/history",
+    icon: HistoryIcon,
+    color: "text-green-700",
   },
 ];
 
