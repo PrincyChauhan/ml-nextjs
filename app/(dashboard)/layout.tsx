@@ -1,7 +1,10 @@
 import Navbar from "@/components/navbar";
 import Sidebar from "@/components/sidebar";
+import { initialProfile } from "@/lib/initial-profile";
 
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
+  await initialProfile();
+
   return (
     <div className="h-full relative">
       <div className="hidden h-full md:flex md:w-72 md:flex-col md:fixed md:inset-y-0 bg-gray-900">
