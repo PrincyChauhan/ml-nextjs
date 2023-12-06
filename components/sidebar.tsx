@@ -22,7 +22,7 @@ const routes = [
   },
   {
     label: "Actual Data",
-    href: "/image",
+    href: "/image1",
     icon: ImageIcon,
     color: "text-pink-700",
   },
