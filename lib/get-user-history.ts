@@ -27,8 +27,11 @@ export const getUserHistroy = async () => {
             case "knn_matrix_roc":
               modalName = "KNN";
                 break;
-            case "accu_comp_graph":
-              modalName = "Comparison Graph";
+            case "logistic_act_roc_curve":
+              modalName = "Actual Logistic";
+                break;    
+            case "accu_comp_graph_new":
+              modalName = "Actual new graph";
                 break;
 
             default:
