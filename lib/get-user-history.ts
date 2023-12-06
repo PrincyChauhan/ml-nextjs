@@ -16,31 +16,30 @@ export const getUserHistroy = async () => {
 
   const userHistoryWithDetails: UserHistoryColumn[] = userHistory.map(
     (history) => {
-        let graphType = history.graphType;
-        switch (graphType) {
+        let modalName = history.graphType;
+        switch (modalName) {
             case "knn_matrix_roc":
-                graphType = "KNN";
+              modalName = "KNN";
                 break;
             case "SVM":
-                graphType = "SVM";
+              modalName = "SVM";
                 break;
             case "knn_matrix_roc":
-                graphType = "KNN";
+              modalName = "KNN";
                 break;
             case "accu_comp_graph":
-                graphType = "Comparison Graph";
+              modalName = "Comparison Graph";
                 break;
 
             default:
-                graphType;
+              modalName;
                 break;
         }
 
         return {
             id: history.id,
-            userName: history.user.name,
             accuracy: history.accuracy,
-            graphType: graphType,
+            modalName: modalName,
             createdAt: `${history.createdAt.toLocaleDateString()} ${history.createdAt.toLocaleTimeString()}`, // Format Date
         };
     }

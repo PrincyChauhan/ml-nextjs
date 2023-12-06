@@ -15,7 +15,13 @@ const montserrat = Montserrat({
 
 const routes = [
   {
-    label: "ML Generation",
+    label: "Generated Data",
+    href: "/image",
+    icon: ImageIcon,
+    color: "text-pink-700",
+  },
+  {
+    label: "Actual Data",
     href: "/image",
     icon: ImageIcon,
     color: "text-pink-700",
